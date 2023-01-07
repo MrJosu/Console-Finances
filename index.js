@@ -102,10 +102,10 @@ for(let i = 0; i < income.length; i++){
     avg+=income[i]; 
 }
 let average = (avg / income.length).toFixed(2);
-let maximum = Math.max(...income)
-let minimum = Math.min(...income)
-let maxMonth = null
-let minMonth = null
+let maximum = Math.max(...income);
+let minimum = Math.min(...income);
+let maxMonth = null;
+let minMonth = null;
 for(let i = 0; i < income.length; i++){
     if (income[i] === maximum) {
         maxMonth = finances[i+1][0]
@@ -123,4 +123,4 @@ let res = 'Financial Analysis' + '\n' +
 'Average  Change: $' + average + '\n' +
 'Greatest Increase in Profits: ' + maxMonth + ' ($' + maximum + ')' + '\n' +
 'Greatest Decrease in Profits: ' + minMonth + ' ($' + minimum + ')'
-console.log(res)
+console.log(res);
