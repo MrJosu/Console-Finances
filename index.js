@@ -86,47 +86,41 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+let months = finances.length;
 let sum = 0;
-let months = finances.length
 for(let i = 0; i < finances.length; i++){
     sum+=finances[i][1];
 }
-console.log(months)
-console.log(sum)
-// let average = Math.round(sum / months);
-// console.log(average)
 let income = [];
 for(let i = 0; i < finances.length; i++){
-    if(finances[i+1] !== finances.lenght){
+    if(finances[i+1]){
     income.push(finances[i+1][1] - finances[i][1])
-    console.log(income[i])
     }
 }
-let sum2 = 0;
+let avg = 0;
 for(let i = 0; i < income.length; i++){
-    sum2+=income[i]; 
+    avg+=income[i]; 
 }
-console.log(sum2/months)
+let average = (avg / months).toFixed(2);
 let maximum = Math.max(...income)
 let minimum = Math.min(...income)
-console.log(maximum)
-console.log(minimum)
 let maxMonth = null
 let minMonth = null
 for(let i = 0; i < income.length; i++){
-    // if(income[i]===maximum) {
     if (income[i] === maximum) {
         maxMonth = finances[i+1][0]
     }
 }
-console.log(maxMonth)
 for(let i = 0; i < income.length; i++){
-    // if(income[i]===maximum) {
     if (income[i] === minimum) {
         minMonth = finances[i+1][0]
     }
 }
-console.log(minMonth)
-
-// ['Jan-2012', -755566],
-// ['Feb-2012', 1170593],
+let res = 'Financial Analysis' + '\n' +
+'--------------------------------------------------' + '\n' +
+'Total Months: '+ months + '\n' +
+'Total: $' + sum + '\n' +
+'Average  Change: $' + average + '\n' +
+'Greatest Increase in Profits: ' + maxMonth + ' ($' + maximum + ')' + '\n' +
+'Greatest Decrease in Profits: ' + minMonth + ' ($' + minimum + ')'
+console.log(res)
