@@ -31,7 +31,7 @@ https://mrjosu.github.io/Console-Finances/
 
 ## Instructions
 
-To check console output I advice You to use Google Chrome web browser as I wrote this instuction based on Google Chrome layout.
+To check console output I suggest You to use <b>Google Chrome</b> web browser as I wrote this instuction based on Google Chrome layout.
 <br>Please open deployed repo url and press on your keyboard key combination: Ctrl + Shift + i to open Dev tools. 
 <br>After select Console from top row to see output as on screenshot from description (you can use that screenshot to navigate)
 
