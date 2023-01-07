@@ -1,6 +1,6 @@
 var finances = [
 ['Jan-2010', 867884],
-['Feb-2010', 984655],
+['Feb-2010', 984655], 
 ['Mar-2010', 322013],
 ['Apr-2010', -69417],
 ['May-2010', 310503],
@@ -96,3 +96,37 @@ console.log(sum)
 // let average = Math.round(sum / months);
 // console.log(average)
 let income = [];
+for(let i = 0; i < finances.length; i++){
+    if(finances[i+1] !== finances.lenght){
+    income.push(finances[i+1][1] - finances[i][1])
+    console.log(income[i])
+    }
+}
+let sum2 = 0;
+for(let i = 0; i < income.length; i++){
+    sum2+=income[i]; 
+}
+console.log(sum2/months)
+let maximum = Math.max(...income)
+let minimum = Math.min(...income)
+console.log(maximum)
+console.log(minimum)
+let maxMonth = null
+let minMonth = null
+for(let i = 0; i < income.length; i++){
+    // if(income[i]===maximum) {
+    if (income[i] === maximum) {
+        maxMonth = finances[i+1][0]
+    }
+}
+console.log(maxMonth)
+for(let i = 0; i < income.length; i++){
+    // if(income[i]===maximum) {
+    if (income[i] === minimum) {
+        minMonth = finances[i+1][0]
+    }
+}
+console.log(minMonth)
+
+// ['Jan-2012', -755566],
+// ['Feb-2012', 1170593],
