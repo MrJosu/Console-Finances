@@ -93,7 +93,7 @@ for(let i = 0; i < finances.length; i++){
 }
 let income = [];
 for(let i = 0; i < finances.length; i++){
-    if(finances[i+1]){
+    if(finances[i+1]!== finances.lenght){
     income.push(finances[i+1][1] - finances[i][1])
     }
 }
@@ -101,7 +101,7 @@ let avg = 0;
 for(let i = 0; i < income.length; i++){
     avg+=income[i]; 
 }
-let average = (avg / months).toFixed(2);
+let average = (avg / income.length).toFixed(2);
 let maximum = Math.max(...income)
 let minimum = Math.min(...income)
 let maxMonth = null
